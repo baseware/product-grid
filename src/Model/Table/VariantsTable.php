@@ -59,15 +59,18 @@ class VariantsTable extends Table
             'foreignKey' => 'product_id',
             'joinType' => 'INNER',
             'className' => 'CakeCart.Products',
+            'conditions' => ['Products.statuse_id'=>2],
         ]);
         $this->belongsTo('Statuses', [
             'foreignKey' => 'statuse_id',
             'joinType' => 'INNER',
             'className' => 'CakeCart.Statuses',
+            'conditions' => ['Statuses.statuse_id'=>1],
         ]);
         $this->hasMany('Variantimages', [
             'foreignKey' => 'variant_id',
             'className' => 'CakeCart.Variantimages',
+            'conditions' => ['Variantimages.statuse_id'=>2],
         ]);
     }
 

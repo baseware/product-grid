@@ -60,6 +60,7 @@ class ProductsTable extends Table
             'foreignKey' => 'statuse_id',
             'joinType' => 'INNER',
             'className' => 'CakeCart.Statuses',
+            'conditions' => ['Statuses.statuse_id'=>1],
         ]);
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
@@ -68,6 +69,7 @@ class ProductsTable extends Table
         $this->hasMany('Variants', [
             'foreignKey' => 'product_id',
             'className' => 'CakeCart.Variants',
+            'conditions' => ['statuse_id'=>2],
         ]);
         $this->addBehavior('Search.Search');
          $this->searchManager()

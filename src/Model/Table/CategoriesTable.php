@@ -57,6 +57,7 @@ class CategoriesTable extends Table
             'foreignKey' => 'statuse_id',
             'joinType' => 'INNER',
             'className' => 'CakeCart.Statuses',
+            'conditions' => ['statuse_id'=>1],
         ]);
         $this->hasMany('Categories', [
             'foreignKey' => 'category_id',

@@ -65,7 +65,7 @@ class CategoriesController extends AppController
             }
             $this->Flash->error(__('The category could not be saved. Please, try again.'));
         }
-        $statuses = $this->Categories->Statuses->find('list', ['conditions'=>['statuse_id'=>1],'limit' => 200]);
+        $statuses = $this->Categories->Statuses->find('list', ['limit' => 200]);
         $categories = $this->Categories->find('list', ['conditions'=>['category_id IS'=>null],'limit' => 200]);
         $this->set(compact('category', 'statuses','categories'));
     }
@@ -91,7 +91,7 @@ class CategoriesController extends AppController
             }
             $this->Flash->error(__('The category could not be saved. Please, try again.'));
         }
-        $statuses = $this->Categories->Statuses->find('list', ['conditions'=>['statuse_id'=>1],'limit' => 200]);
+        $statuses = $this->Categories->Statuses->find('list', ['limit' => 200]);
         $categories = $this->Categories->find('list', ['conditions'=>['category_id IS'=>null],'limit' => 200]);
         $this->set(compact('category', 'statuses','categories'));
     }

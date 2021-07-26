@@ -71,7 +71,7 @@ class ProductsController extends AppController
             }
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
-        $statuses = $this->Products->Statuses->find('list', ['conditions'=>['statuse_id'=>1],'limit' => 200]);
+        $statuses = $this->Products->Statuses->find('list', ['limit' => 200]);
         $users = $this->Products->Users->find('list', ['limit' => 200]);
         $this->set(compact('product', 'statuses', 'users'));
     }
@@ -103,7 +103,7 @@ class ProductsController extends AppController
             
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
-        $statuses = $this->Products->Statuses->find('list', ['conditions'=>['statuse_id'=>1],'limit' => 200]);
+        $statuses = $this->Products->Statuses->find('list', ['limit' => 200]);
         $users = $this->Products->Users->find('list', ['limit' => 200]);
         $this->set(compact('product', 'statuses', 'users'));
     }

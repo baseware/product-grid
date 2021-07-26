@@ -67,7 +67,7 @@ class VariantsController extends AppController
         }
         $units = $this->Variants->Units->find('list', ['limit' => 200]);
         $products = $this->Variants->Products->find('list', ['limit' => 200]);
-        $statuses = $this->Variants->Statuses->find('list', ['conditions'=>['statuse_id'=>1],'limit' => 200]);
+        $statuses = $this->Variants->Statuses->find('list', ['limit' => 200]);
         $this->set(compact('variant', 'units', 'products', 'statuses'));
     }
 
@@ -94,7 +94,7 @@ class VariantsController extends AppController
         }
         $units = $this->Variants->Units->find('list', ['limit' => 200]);
         $products = $this->Variants->Products->find('list', ['limit' => 200]);
-        $statuses = $this->Variants->Statuses->find('list', ['conditions'=>['statuse_id'=>1],'limit' => 200]);
+        $statuses = $this->Variants->Statuses->find('list', ['limit' => 200]);
         $this->set(compact('variant', 'units', 'products', 'statuses'));
     }
 
